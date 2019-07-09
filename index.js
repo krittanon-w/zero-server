@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     console.log('cookies:', req.cookies)
     console.log('cookies.count:', count)
     res.cookie('count', ++count)
-    res.send('ok')
+    res.send('ok|' + count)
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
